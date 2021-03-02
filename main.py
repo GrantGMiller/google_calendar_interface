@@ -3,7 +3,6 @@ import json
 import time
 import webbrowser
 
-from Extron.Scheduler.GoogleCalendar import GoogleCalendar
 from oauth_tools import AuthManager
 
 CALENDAR_NAME = 'Grants Test New Calendar'
@@ -46,23 +45,27 @@ google._updateCalendar(CALENDAR_NAME)
 google._getCalendarID()
 
 '''View current events'''
-ret = []
+startDT = (datetime.datetime.now() - datetime.timedelta(days=2)).replace(second=0, microsecond=0)
+endDT = startDT + datetime.timedelta(days=7)
+
+items = []
 google.GetEventsForStartAndEndDateTimes(
-    startDate=datetime.date.today(),
-    endDate=datetime.date.today() + datetime.timedelta(days=7),
-    calendarEventList=ret,
+    startDate=startDT,
+    endDate=endDT,
+    calendarEventList=items,
 )
-for item in ret:
+print('items=', items)
+for item in items:
     print(item)
 
 '''Create a new event'''
 
-startDT = datetime.datetime.now()
-endDT = startDT + datetime.timedelta(minutes=30)
+# startDT = datetime.datetime.now()
+# endDT = startDT + datetime.timedelta(minutes=30)
 
-newEvent = google.SetScheduledEvent(
-    conf_room=CALENDAR_NAME,
-    start=startDT,
-    end=endDT,
-)
-google._setEvent(newEvent)
+# newEvent = google.SetScheduledEvent(
+#     conf_room=CALENDAR_NAME,
+#     start=startDT,
+#     end=endDT,
+# )
+# google._setEvent(newEvent)

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../aes-tools/.idea/aes-tools.iml" filepath="$PROJECT_DIR$/../aes-tools/.idea/aes-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../calendar_base/.idea/calendar_base.iml" filepath="$PROJECT_DIR$/../calendar_base/.idea/calendar_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tcp-connection-handler/.idea/connection-handler.iml" filepath="$PROJECT_DIR$/../tcp-connection-handler/.idea/connection-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../extronlib-clone/.idea/extronlib-clone.iml" filepath="$PROJECT_DIR$/../extronlib-clone/.idea/extronlib-clone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/google_calendar_tools.iml" filepath="$PROJECT_DIR$/.idea/google_calendar_tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oAuth_tools_2/.idea/oAuth_tools_2.iml" filepath="$PROJECT_DIR$/../oAuth_tools_2/.idea/oAuth_tools_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oauth_tools/.idea/oauth_tools.iml" filepath="$PROJECT_DIR$/../oauth_tools/.idea/oauth_tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../persistant-variables/.idea/persistant-variables.iml" filepath="$PROJECT_DIR$/../persistant-variables/.idea/persistant-variables.iml" />
+    </modules>
+  </component>
+</project>
