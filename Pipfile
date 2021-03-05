@@ -10,6 +10,7 @@ pytz = "*"
 calendar-base = "*"
 requests = "*"
 python-dateutil = "*"
+twine = "*"
 
 [requires]
 python_version = "3.8"

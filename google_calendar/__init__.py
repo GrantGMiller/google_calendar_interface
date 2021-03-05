@@ -2,6 +2,8 @@ import json
 from calendar_base import _BaseCalendar, _CalendarItem
 import requests
 from dateutil.parser import parse
+import datetime
+import time
 
 
 class GoogleCalendar(_BaseCalendar):
@@ -21,6 +23,7 @@ class GoogleCalendar(_BaseCalendar):
         self._debug = debug
         self.session = requests.session()
         super().__init__(*a, **k)
+        self._GetCalendarID()
 
     def print(self, *a, **k):
         if self._debug:
@@ -61,6 +64,7 @@ class GoogleCalendar(_BaseCalendar):
                     'Authorization': 'Bearer {}'.format(self._getAccessTokenCallback())
                 }
             )
+            self._NewConnectionStatus('Connected' if resp.ok else 'Disconnected')
             try:
                 self.print('_GetCalendarID resp=', json.dumps(resp.json(), indent=2))
             except Exception as e:
@@ -150,10 +154,12 @@ class GoogleCalendar(_BaseCalendar):
 
         )
 
+        return resp
+
     def CreateCalendarEvent(self, subject, body, startDT, endDT):
         print('134 CreateCalendarEvent(', subject, body, startDT, endDT)
         timezone = time.tzname[-1] if len(time.tzname) > 1 else time.tzname[0]
-        self.print('timezone=', timezone)
+        print('timezone=', timezone)
 
         data = {
             "kind": "calendar#event",
@@ -208,6 +214,14 @@ class GoogleCalendar(_BaseCalendar):
                 endDT=end,
 
             )
+        return resp
+
+    def __str__(self):
+        return '<217 GoogleCalendar: RoomName={}, ConnectionStatus={}, debug={}>'.format(
+            self.calendarName,
+            self._connectionStatus,
+            self._debug
+        )
 
 
 if __name__ == '__main__':
