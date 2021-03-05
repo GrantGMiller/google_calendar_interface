@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../extronlib-clone/.idea/extronlib-clone.iml" filepath="$PROJECT_DIR$/../extronlib-clone/.idea/extronlib-clone.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/google_calendar_tools.iml" filepath="$PROJECT_DIR$/.idea/google_calendar_tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/../gs_oauth/.idea/gs_oauth.iml" filepath="$PROJECT_DIR$/../gs_oauth/.idea/gs_oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/../oAuth_tools_2/.idea/oAuth_tools_2.iml" filepath="$PROJECT_DIR$/../oAuth_tools_2/.idea/oAuth_tools_2.iml" />

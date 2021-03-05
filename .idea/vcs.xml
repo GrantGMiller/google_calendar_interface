@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../extronlib-clone" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../gs_oauth" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../gs_persistant-variables" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../oAuth_tools_2" vcs="Git" />
